@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Aya168.github.io/Aya168",
+  "homepage": "https://Aya168.github.io/Aya168.github.io",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
