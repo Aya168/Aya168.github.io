@@ -2,6 +2,6 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/aya168/',
+  base: '/Aya168/',
   plugins: [react()],
 })
