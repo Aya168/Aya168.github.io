@@ -4,7 +4,7 @@ import React from "react";
 // Uses Tailwind CSS utility classes (assumes Tailwind is available in the project).
 // Default export: AyaSpiraSite
 
-export default function AyaSpiraSite() {
+export default function App() { 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-800 antialiased">
       <header className="bg-white shadow-sm sticky top-0 z-30">
