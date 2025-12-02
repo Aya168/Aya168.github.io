@@ -31,12 +31,8 @@ export default function App() {
     fontWeight: "500",
   };
 
-  const navLinkHover = {
-    color: "#3b82f6",
-  };
-
   const sectionStyle = {
-    maxWidth: "900px",
+    maxWidth: "800px",
     margin: "2rem auto",
     padding: "1rem",
   };
@@ -47,12 +43,6 @@ export default function App() {
     padding: "1rem 1.5rem",
     marginBottom: "1rem",
     boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-    transition: "transform 0.2s, box-shadow 0.2s",
-  };
-
-  const cardHover = {
-    transform: "translateY(-5px)",
-    boxShadow: "0 8px 24px rgba(0,0,0,0.15)",
   };
 
   const buttonStyle = {
@@ -65,11 +55,6 @@ export default function App() {
     fontWeight: "600",
     marginRight: "0.5rem",
     marginTop: "0.5rem",
-    transition: "transform 0.2s",
-  };
-
-  const buttonHover = {
-    transform: "scale(1.05)",
   };
 
   return (
@@ -79,7 +64,7 @@ export default function App() {
         <div>
           <h1 style={{ color: "#1e40af", fontSize: "1.75rem", margin: 0 }}>Aya Spira</h1>
           <div style={{ fontSize: "0.875rem", color: "#374151" }}>
-            MSc Computer Science, Tel Aviv University · AI Security Researcher
+            MSc Computer Science · AI Security Researcher
           </div>
         </div>
         <nav>
@@ -93,32 +78,15 @@ export default function App() {
 
       <main>
         {/* HERO */}
-        <section style={{ ...sectionStyle, display: "flex", gap: "2rem", flexWrap: "wrap" }}>
-          <div style={{ flex: 2 }}>
-            <h2 style={{ fontSize: "2.5rem", color: "#1e3a8a", marginBottom: "1rem" }}>
-              Hi — I'm Aya Spira.
-            </h2>
-            <p style={{ color: "#1f2937" }}>
-              MSc Computer Science student at Tel Aviv University researching AI security under Dr. Ben Nassi and Prof. Avishai Wool.
-              I work at the intersection of AI and security, focusing on safety, privacy and robustness of modern AI systems, building experiments and prototypes to evaluate security and defenses.
-            </p>
-            <div style={{ marginTop: "1rem" }}>
-              <a href="mailto:aya16816@gmail.com" style={buttonStyle}>Email</a>
-              <a href="https://www.linkedin.com/in/aya-spira" target="_blank" rel="noreferrer" style={{ ...buttonStyle, background: "white", color: "#1e3a8a", border: "1px solid #3b82f6" }}>LinkedIn</a>
-              <a href="#projects" style={{ ...buttonStyle, background: "white", color: "#1e3a8a", border: "1px solid #3b82f6" }}>Projects</a>
-            </div>
-          </div>
-
-          <div style={{ flex: 1 }}>
-            <div style={cardStyle}>
-              <h4 style={{ color: "#1e40af" }}>Current</h4>
-              <p style={{ fontSize: "0.875rem", color: "#4b5563" }}>AI Security Researcher at Tel Aviv University (under Dr. Ben Nassi & Prof. Avishai Wool)</p>
-            </div>
-            <div style={cardStyle}>
-              <h4 style={{ color: "#1e40af" }}>Education</h4>
-              <p style={{ fontSize: "0.875rem", color: "#4b5563" }}>MSc Computer Science, Tel Aviv University (2025–2027)</p>
-              <p style={{ fontSize: "0.875rem", color: "#4b5563" }}>BSc Computer Science, Technion (2021-2024, Magna Cum Laude)</p>
-            </div>
+        <section style={sectionStyle}>
+          <p style={{ color: "#1f2937", fontSize: "1.1rem" }}>
+            MSc Computer Science student at Tel Aviv University researching AI security under Dr. Ben Nassi & Prof. Avishai Wool.
+            I focus on building experiments and tools to improve the safety, privacy, and robustness of AI systems.
+          </p>
+          <div style={{ marginTop: "1rem" }}>
+            <a href="mailto:aya16816@gmail.com" style={buttonStyle}>Email</a>
+            <a href="https://www.linkedin.com/in/aya-spira" target="_blank" rel="noreferrer" style={{ ...buttonStyle, background: "white", color: "#1e3a8a", border: "1px solid #3b82f6" }}>LinkedIn</a>
+            <a href="#projects" style={{ ...buttonStyle, background: "white", color: "#1e3a8a", border: "1px solid #3b82f6" }}>Projects</a>
           </div>
         </section>
 
@@ -126,8 +94,8 @@ export default function App() {
         <section id="about" style={sectionStyle}>
           <h3 style={{ color: "#1e3a8a", fontSize: "1.75rem" }}>About</h3>
           <p style={{ color: "#1f2937" }}>
-            I focus on AI security: analyzing vulnerabilities in LLM-powered applications, studying model misuse pathways, and developing
-            principled defenses. My work spans adversarial attacks, privacy leakage, model behavior auditing, and secure ML deployment.
+            I specialize in AI security: identifying vulnerabilities in LLM-powered systems, designing principled defenses, and auditing models for privacy and robustness.
+            Previously, I gained experience in software engineering and applied ML research.
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", marginTop: "1rem" }}>
             <div style={cardStyle}>
@@ -137,20 +105,13 @@ export default function App() {
                 <li>2nd place — CS Doing Good Hackathon</li>
               </ul>
             </div>
-            <div style={cardStyle}>
-              <h5 style={{ color: "#2563eb" }}>Background</h5>
-              <p style={{ fontSize: "0.875rem", color: "#4b5563" }}>Experience in software engineering and applied ML research.</p>
-            </div>
           </div>
         </section>
 
         {/* RESEARCH */}
         <section id="research" style={sectionStyle}>
           <h3 style={{ color: "#1e3a8a", fontSize: "1.75rem" }}>Research</h3>
-          <p style={{ color: "#1f2937" }}>
-            My research centers on AI security: attacks, defenses, privacy risks, and the reliability of LLM-based systems. I focus on practical vulnerabilities and methods to prevent adversarial misuse.
-          </p>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", marginTop: "1rem" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "1rem", marginTop: "1rem" }}>
             <div style={cardStyle}>
               <h6 style={{ color: "#2563eb" }}>Core Areas</h6>
               <ul style={{ fontSize: "0.875rem", color: "#4b5563" }}>
@@ -163,18 +124,22 @@ export default function App() {
             <div style={cardStyle}>
               <h6 style={{ color: "#2563eb" }}>Advisors</h6>
               <ul style={{ fontSize: "0.875rem", color: "#4b5563" }}>
-                <li><a href="https://www.tau.ac.il/~bnassi" target="_blank" rel="noreferrer" style={{ color: "#1d4ed8", textDecoration: "underline" }}>Dr. Ben Nassi</a> — AI Security, Tel Aviv University</li>
-                <li><a href="https://www.cs.tau.ac.il/~wool/" target="_blank" rel="noreferrer" style={{ color: "#1d4ed8", textDecoration: "underline" }}>Prof. Avishai Wool</a> — Cybersecurity, Tel Aviv University</li>
+                <li>
+                  <a href="https://www.tau.ac.il/~bnassi" target="_blank" rel="noreferrer" style={{ color: "#1d4ed8", textDecoration: "underline" }}>
+                    Dr. Ben Nassi
+                  </a> — AI Security, Tel Aviv University
+                </li>
+                <li>
+                  <a href="https://www.cs.tau.ac.il/~wool/" target="_blank" rel="noreferrer" style={{ color: "#1d4ed8", textDecoration: "underline" }}>
+                    Prof. Avishai Wool
+                  </a> — Cybersecurity, Tel Aviv University
+                </li>
               </ul>
-            </div>
-            <div style={cardStyle}>
-              <h6 style={{ color: "#2563eb" }}>Publications</h6>
-              <p style={{ fontSize: "0.875rem", color: "#4b5563" }}>A formal list of publications and manuscripts will appear here.</p>
             </div>
           </div>
         </section>
 
-        {/* Projects / CV / Contact can be styled similarly */}
+        {/* Projects, CV, Contact can follow the same card style */}
       </main>
     </div>
   );
